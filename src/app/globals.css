@@ -1,27 +1,35 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  padding: 10px;
+}
+
+.fightarea {
+  display: flex;
+  gap: 20px;
+}
+
+#char,
+#monster {
+  flex: 1;
+}
+
+.lifebar {
+  height: 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+
+.bar {
+  width: 10%;
+}
+
+.lifebar .bar {
+  height: inherit;
+  background-color: red;
+  border-radius: 5px;
+}
+
+.log {
+  border: 1px dotted #999;
+  height: 200px;
+  overflow-y: scroll;
 }
